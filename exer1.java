@@ -35,7 +35,7 @@ public class exer2 {
 
         // nome do adaptador
         String adaptador = "";
-        // buffer para acumular as informaÁıes para impress„o futura
+        // buffer para acumular as informa√ß√µes para impress√£o futura
         String info_accumulator = "";
         try {
             String line = buffer.readLine();
@@ -48,7 +48,7 @@ public class exer2 {
             }
             JOptionPane.showMessageDialog(null, info_accumulator);
             }catch(IOException e) {
-            System.err.println("Chamada inv·lida");
+            System.err.println("Chamada inv√°lida");
         }
     }
 
@@ -75,20 +75,20 @@ public class exer2 {
                     String []lineVector = line.split("ms");
                     int size = lineVector.length;
                     String media = lineVector[size-1].replaceAll("\\D+", "");
-                    JOptionPane.showMessageDialog(null, "MÈdia: " + media + "ms");
+                    JOptionPane.showMessageDialog(null, "M√©dia: " + media + "ms");
                 }
                 
                 if(line.contains("rtt")) {
                 	String []lineVector = line.split(" ");
                 	int size = lineVector.length;
                 	String media = lineVector[size-2].split("/")[1];
-                	JOptionPane.showMessageDialog(null, "\nMÈdia: " + media + "ms");
+                	JOptionPane.showMessageDialog(null, "\nM√©dia: " + media + "ms");
                 }
                 line = buffer.readLine();
             }
 
         }catch(IOException e) {
-            System.err.println("Chamada inv·lida");
+            System.err.println("Chamada inv√°lida");
         }
     }
 }
